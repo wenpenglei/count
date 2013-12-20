@@ -1,0 +1,40 @@
+<h1>Home#index</h1>
+<%= form_tag "/home/index", :method => :get %>
+
+<div class="field">
+  <%= label_tag :a %>
+  <%= text_field_tag :a, params[:a] %>
+</div>
+
+
+<div class=field>
+  <%= label_tag :hash %>
+  <%= text_field_tag :hash, @hash %>
+</div>
+
+<% @hash.each do |k, v| %>
+  <%= "#{k} =>  #{v} times" %><br/>
+<% end %>
+<div class="actions">
+  <%= submit_tag "submit" %>
+</div>
+
+
+
+<hr/>
+<br/>
+
+<div class="field">
+  <%= label_tag :dir_size %>
+  <%= text_field_tag :dir_size, params[:dir_size] %>
+</div>
+
+
+<div class=field>
+  <%= label_tag :hash %>
+  <%= text_field_tag :hash, @dirsize %>
+</div>
+<div class="actions">
+  <%= submit_tag "submit" %>
+</div>
+
